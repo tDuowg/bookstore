@@ -24,4 +24,4 @@ function handleSignUp() {
 
 btnSignUp.addEventListener("click", () => {
     handleSignUp();
-})
+}) 
