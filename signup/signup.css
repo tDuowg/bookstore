@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.img-left {
+    width: 65%;
+    height: 100%;
+    background-color: aqua;
+}
+.img-left img {
+    width: 100%;
+    height: 100%;
+}
+.box-form {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    overflow-y: auto;
+}
+.h1 {
+    text-align: center;
+    margin-bottom: 40px !important; /* Ưu tiên sử dụng style nếu có bị trùng */
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.btn-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* các thành con sẽ nằm căn giữa */
+}
+.btn-login button {
+    width: 30%;
+    height: 58px;
+}
+.login-other {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Tạo khoảng cách giữa các thành phần con */
+    justify-content: center;
+}
+.login-other img {
+    width: 40px;
+}
+.sign-up {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 8px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+}

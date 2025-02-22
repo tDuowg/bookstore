@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../common/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Book Store</h1>
+        <div class="header-menu">
+            <a href="../home/home.html">Trang chủ</a>
+            <a href="#">Sản phẩm</a>
+            <a href="#">Về chúng tôi</a>
+        </div>
+        <div class="header-button">
+            <button type="button" class="btn btn-outline-dark" id="btnLogin">Đăng nhập</button>
+            <button type="button" class="btn btn-outline-dark" id="btnSignUp">Đăng ký</button>
+        </div>
+    </header>
+    <main>
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://t4.ftcdn.net/jpg/06/88/66/31/360_F_688663136_CYDZXf10utvUG7QScsByISc5AaEDf68F.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWrX-YWLaj8Gh_dHHn9yynrRzsfv-HnT11xN60vR71RUbHk-Q3BPjGP8IvZiitlIr5ASs&usqp=CAU"
+                        class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/premium-photo/books-shelf-world-book-day-banner-world-book-day-ai_220166-13081.jpg"
+                        class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="about">
+            <div class="about-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/6831/6831000.png" alt="" />
+                <div>
+                    <h5>Free Ship</h5>
+                    <p>Đơn hàng trên 1.000.000đ</p>
+                </div>
+            </div>
+            <div class="about-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/11425/11425582.png" alt="" />
+                <div>
+                    <h5>Free Return</h5>
+                    <p>Trong 30 ngày</p>
+                </div>
+            </div>
+            <div class="about-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/1611/1611173.png" alt="" />
+                <div>
+                    <h5>Discount 20%</h5>
+                    <p>Khi đăng kí thành viên</p>
+                </div>
+            </div>
+            <div class="about-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/1067/1067566.png" alt="" />
+                <div>
+                    <h5>Support 24/7</h5>
+                    <p>Dịch vụ hỗ trợ 24/7</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="outstanding-product">
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://hanoibookstore.com/storage/oxford-activity-book-for-children-sach-den-trang-sach-tieng-anh-400x400.jpg"
+                        alt="" />
+                    <p class="item-title">Sách truyện tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (SÁch đen trắng) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>59.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://hanoibookstore.com/storage/oxford-reading-and-writing-skill-sach-mau6-400x400.jpg"
+                        alt="" />
+                    <p class="item-title">Sách Tiếng Anh theo bộ</p>
+                    <p class="item-description">OXFORD READING AND WRITING SKILL (Sách màu)</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>70.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://hanoibookstore.com/storage/high-performance-web-sites-hanoi-bookstore-400x400.webp"
+                        alt="" />
+                    <p class="item-title">Sách truyện tiếng Anh</p>
+                    <p class="item-description">High Performance Web Sites</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>150.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="outstanding-product">
+                <div class="item">
+                    <img src="https://hanoibookstore.com/storage/get-ready-starter-mover-flyer-3-cuon-moi-sach-mau1-400x400.jpg"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Get Ready Starter, Mover, Flyer 3 cuốn mới (Sách màu)</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>120.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://hanoibookstore.com/storage/soft-skills-the-software-developers-life-manual-400x400.jpg"
+                        alt="" />
+                    <p class="item-title">Sách ngoại ngữ</p>
+                    <p class="item-description">Soft Skills - The Software Developers Life Manual</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>25.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRAspaAF1WgpU-bcbOsFfcLd3cBSAkm4EV10kaM3wSJR_0vBnpXDyXcGwDTJb4cKCzLtgRGNI6fC1vAS881-7qDGBdjTD2tKmJF138sZJxm"
+                        alt="" />
+                    <p class="item-title">Sách tiếng Anh</p>
+                    <p class="item-description">The Life-Changing Magic of Tidying Up</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>180.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="outstanding-product">
+                <div class="item">
+                    <img src="https://hanoibookstore.com/storage/ca-bo-11-400x400.jpg" alt="" />
+                    <p class="item-title">Sách Tiếng Hàn</p>
+                    <p class="item-description">Tiếng Hàn Tổng Hợp 1 (Kèm file nghe - Sách đen trắng)</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>230.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+            <div class="outstanding-product">
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="https://bizweb.dktcdn.net/thumb/large/100/469/746/products/bc608beb-0ae8-4bd5-8a24-e6db54034757.jpg?v=1722544068957"
+                        alt="" />
+                    <p class="item-title">Truyện tranh tiếng Anh</p>
+                    <p class="item-description">Oxford activity book for children (Sách màu) Sách tiếng anh</p>
+                    <div class="item-bottom">
+                        <div>
+                            <div>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <p>100.000đ</p>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <h2>Danh mục nổi bật</h2>
+            <div class="product-item">
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLUcwYhe1Qag-HnJfMuMKwkeu3xZB3oQWYGw&s"
+                        alt="" />
+                    <p>Sách giáo khoa</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSYEuLNE7m2JCmsOv4EurN98kMr-HWuxLjD8Czld132OdwVEMhBqJNRFgbaRWh_9RFbx--QN3q1GPV8aaQoVTZTyXfoq6CQxmRg3bYgeXUKpRxjfoXsOMTxlQ"
+                        alt="" />
+                    <p>Sách Tiếng Anh</p>
+                </div>
+                <div>
+                    <img src="https://product.hstatic.net/200000343865/product/1_ed055f5f67b541fb9f6ebe4f98cad804_2e624c13df1844809766bad152766d02.jpg"
+                        alt="" />
+                    <p>Truyện tranh</p>
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4VOEqzhJw5tAfLGMj1zWbm8pGjkGfKgwFZQ&s"
+                        alt="" />
+                    <p>Tiểu thuyết</p>
+                </div>
+            </div>
+        </div>
+        <div class="follow">
+            <div>
+                <img src="https://hanoibookstore.com/themes/book/images/icons/icon-email.svg" alt="" />
+                <p>Theo dõi chúng tôi</p>
+            </div>
+            <p>Đăng ký để nhận thông tin sản phẩm mới nhất</p>
+            <div>
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <button class="btn btn-outline-secondary sending" type="button">Đăng ký</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-contact">
+                <h3>Liên hệ</h3>
+                <p>Địa chỉ: 123 Đường ABC, Quận XYZ, TP. HCM</p>
+                <p>Email: contact@bookstore.com</p>
+                <p>Số điện thoại: 0901234567</p>
+                <p>Giờ làm việc: 8:00 - 17:00</p>
+            </div>
+            <div class="footer-category">
+                <h3>Danh mục sản phẩm</h3>
+                <a href="#">Sách</a>
+                <a href="#">Tạp chí</a>
+                <a href="#">Báo</a>
+                <a href="#">Tài liệu</a>
+            </div>
+            <div class="footer-category">
+                <h3>Chính sách</h3>
+                <a href="#">Chính sách bảo mật</a>
+                <a href="#">Chính sách vận chuyển</a>
+                <a href="#">Chính sách đổi trả</a>
+                <a href="#">Chính sách thanh toán</a>
+            </div>
+            <div class="footer-payment">
+                <h3>Thanh toán</h3>
+                <img src="../assets/payment.png" alt="Thanh toán">
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>Copyright © 2024 bookstore all rights reserved. Powered by salaweb.vn</p>
+            <p>Các quyền đã được bảo hộ.</p>
+        </div>
+
+
+    </footer>
+</body>
+<script>
+    const products = document.querySelectorAll(".item");
+    products.forEach(product => {
+        product.addEventListener("click", () => {
+            window.location.href = "../detail/detail.html";
+        });
+    });
+</script>
+<script src="../common/index.js"></script>
+
+</html>
