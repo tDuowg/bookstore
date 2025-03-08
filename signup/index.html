@@ -36,12 +36,22 @@
                 <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
                 <label for="confirmPassword">Confirm Password</label>
             </div>
+            <select class="form-select" aria-label="Default select example" id="gender">
+                <option selected>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="form-floating">
+                <input type="date" class="form-control" id="birth">
+                <label for="email">Birthday</label>
+            </div>
         </div>
 
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
             <label class="form-check-label" for="flexCheckDefault">
-                  I agree to the <a href="#">Terms and Conditions</a>
+                I agree to the <a href="#">Terms and Conditions</a>
             </label>
         </div>
         <div class="btn-login">
@@ -54,14 +64,15 @@
             <img src="https://cdn-icons-png.flaticon.com/128/0/747.png" alt="google" />
         </div>
         <div class="sign-up">
-        <p>Bạn đã có tài khoản?</p>
+            <p>Bạn đã có tài khoản?</p>
             <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="../login/login.html">
+                href="../login">
                 Đăng nhập
             </a>
         </div>
     </div>
 </body>
 <script src="./signup.js"></script>
+<script src="../common/authentication.js"></script>
 
 </html>

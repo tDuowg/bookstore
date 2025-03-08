@@ -19,11 +19,24 @@
     <header>
         <h1>Book Store</h1>
         <div class="header-menu">
-            <a href="../home/home.html">Trang chủ</a>
+            <a href="../home">Trang chủ</a>
             <a href="#">Sản phẩm</a>
             <a href="#">Về chúng tôi</a>
         </div>
-        <div class="header-button">
+        <div class="dropdown header-button" id="menu">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                data-bs-toggle="dropdown" aria-expanded="false">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item active" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Setting</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#" id="logout">Đăng xuất</a></li>
+            </ul>
+        </div>
+        <div class="header-button" id="form">
             <button type="button" class="btn btn-outline-dark" id="btnLogin">Đăng nhập</button>
             <button type="button" class="btn btn-outline-dark" id="btnSignUp">Đăng ký</button>
         </div>
@@ -481,10 +494,11 @@
     const products = document.querySelectorAll(".item");
     products.forEach(product => {
         product.addEventListener("click", () => {
-            window.location.href = "../detail/detail.html";
+            window.location.href = "../detail";
         });
     });
 </script>
 <script src="../common/index.js"></script>
+<script src="../common/authentication.js"></script>
 
 </html>
