@@ -51,23 +51,23 @@
         <div class="detail-container">
             <div class="detail-title">
                 <div>
-                    <img class="detail-image-main" src="https://pos.nvncdn.com/fd5775-40602/ps/20230824_CaKI46AHJr.jpeg"
+                    <img class="detail-image-main" src="https://pos.nvncdn.com/fd5775-40602/ps/20230824_CaKI46AHJr.jpeg" id="thumbnail"
                         alt="">
                 </div>
                 <div class="detail-status">
-                    <h2>Bộ Sách Ngoại Ngữ</h2>
+                    <h2 id="nameBook">Bộ Sách Ngoại Ngữ</h2>
                     <div class="rating">
-                        <div>
+                        <div id="rating">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <p>(100 đánh giá)</p>
+                        <p id="totalRating">(100 đánh giá)</p>
                     </div>
-                    <p class="price">100.000đ</p>
-                    <p class="description">Bộ sách ngoại ngữ bao gồm đĩa CD học tiếng Anh và sách giáo khoa</p>
+                    <p id="price">100.000đ</p>
+                    <p id="description">Bộ sách ngoại ngữ bao gồm đĩa CD học tiếng Anh và sách giáo khoa</p>
                     <div class="form">
                         <input type="number" min="1" max="10" value="1">
                         <button type="button" class="btn btn-primary">Thêm Vào Giỏ </button>
@@ -80,13 +80,13 @@
             </div>
             <div class="detail-title">
                 <div class="detail-image">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlKq_5htHMqon6rYjFW4k4Ng7iVR9I8HCbgCG8JxTPJpSoYBBn0-Cz7Z5uRqW5IOcpj-4&usqp=CAU"
+                    <img id="image1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlKq_5htHMqon6rYjFW4k4Ng7iVR9I8HCbgCG8JxTPJpSoYBBn0-Cz7Z5uRqW5IOcpj-4&usqp=CAU"
                         alt="">
-                    <img src="https://pos.nvncdn.com/fd5775-40602/ps/20230824_CaKI46AHJr.jpeg" alt="">
+                    <img id="image2" src="https://pos.nvncdn.com/fd5775-40602/ps/20230824_CaKI46AHJr.jpeg" alt="">
                 </div>
                 <div class="detail-status">
-                    <p>Danh Mục: Sách ngoại ngữ</p>
-                    <p>Tình trạng: Còn hàng</p>
+                    <p id="category">Danh Mục: Sách ngoại ngữ</p>
+                    <p id="status">Tình trạng: Còn hàng</p>
                 </div>
             </div>
             <div>
@@ -143,4 +143,5 @@
 </body>
 <script src="../common/index.js"></script>
 <script src="../common/authentication.js"></script>
+<script src="index.js"></script>
 </html>

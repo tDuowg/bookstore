@@ -60,12 +60,13 @@
 }
 
 .outstanding-product{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 .outstanding-product .item{
-    width: 25%;
+    flex: 1;
     height: 550px;
     display: flex;
     flex-direction: column;
@@ -73,6 +74,15 @@
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #ccc;
+}
+.outstanding-product .item-1{
+    flex: 1;
+    height: 550px;
+    padding: 20px;
+}
+.outstanding-product .item img{
+    width: 100%;
+    height: 60%;
 }
 .outstanding-product .item-bottom{
     display: flex;
