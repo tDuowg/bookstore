@@ -41,7 +41,7 @@ sendButtonEl.addEventListener("click", () => {
 
     const headers = {
         "Content-Type": "application/json",
-        "X-Goog-Api-Key": "AIzaSyCCTslJWlr3mHtzwnF4BFaKPeGaPF7xSug",
+        "X-Goog-Api-Key": "AIzaSyDqNpNtkZJOTR4bfY_byhc4dKTErUTT_Jc",
         "Connection": "keep-alive"
     };
 

@@ -6,36 +6,30 @@ const confirmPassword = document.getElementById("confirmPassword");
 const gender = document.getElementById("gender");
 const birth = document.getElementById("birth");
 function handleSignUp() {
-    // fullName: Phải ít nhất 2 từ và không chứa kí tự đặc biệt.
-    if (fullName.value.split(" ").length < 2)  {
-        alert("Full name must have at least 2 words");
+    if (fullName.value.split(" ").length < 2) {
+        alert("Please enter full name with at least 2 words");
         return;
     }
-    if (fullName.value.match(/[^a-zA-Z0-9 ]/)) {
-        alert("Full name must not contain special characters");
+    if (fullName.value.match(/[^a-zA-Z ]/)) {
+        alert("Full name must contain only letters");
         return;
     }
-    // email: Phải có dạng email(abc@xyz.vn) và ít nhất phải có 8 kí tự.
-    if (email.value.length < 8) {
-        alert("Email must have at least 8 characters");
-        return;
-    }
-    // match xử lý định dạng ^[a-zA-Z0-9]+: 1 chuỗi kí tự bắt đầu bằng chữ cái hoặc số.
-    if (!email.value.match(/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/)) {
+    if (!email.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
         alert("Invalid email format");
         return;
     }
-    // password: Phải có ít nhất 6 kí tự.
     if (password.value.length < 6) {
-        alert("Password must have at least 6 characters");
+        alert("Password must contain at least 6 characters");
         return;
     }
-    // confirmPassword: Phải trùng với password.
-    if (confirmPassword.value != password.value) {
+    if (!password.value.match(/[a-z]/) || !password.value.match(/[A-Z]/) || !password.value.match(/[0-9]/)) {
+        alert("Password must contain at least 1 lowercase letter, 1 uppercase letter and 1 number");
+        return;
+    }
+    if (confirmPassword.value !== password.value) {
         alert("Password and confirm password do not match");
         return;
     }
-    // không được để trống trường input.
     if (!gender.value || !birth.value) {
         alert("Please enter input");
         return;
