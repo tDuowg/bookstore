@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Firebase Authentication</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
-    <img src="./image/Logo.png" alt="Logo">
-    <h1>
-        Book Store
-    </h1>
-    <p>
-        Welcome to our store
-    </p>
-
+    <h2>Firebase Authentication</h2>
+    <script type="module">
+        import { getUsersFromFirestore } from "./handle/firebase.js";
+    
+        getUsersFromFirestore()
+            .then((users) => console.log("Users:", users))
+            .catch((error) => console.error(error));
+    </script>    
 </body>
-<script>
-    setTimeout(handleCountdown, 1000)
-    function handleCountdown() {
-        window.location.href = "./login"
-    }
-</script>
-<script src="./common/authentication.js"></script>
 
 </html>
