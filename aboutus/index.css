@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 80px;
+    background-color: white;
+}
+/* Animation cho tiêu đề */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Hiệu ứng khi hover vào các đoạn văn */
+.about-item {
+    transition: all 0.3s ease;
+    padding: 15px;
+    border-radius: 8px;
+}
+.about-item:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+/* Style cho ảnh minh họa */
+.about-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
