@@ -1,4 +1,4 @@
-const btnSignUp = document.getElementById("btnSignUp");
+const btnSignUp = document.getElementById("btnSignUp"); // Get the button element
 const fullName = document.getElementById("fullName");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
@@ -34,13 +34,13 @@ function handleSignUp() {
         alert("Please enter input");
         return;
     }
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-    if (!fullName.value || !email.value || !password.value || !confirmPassword.value) {
+    let users = JSON.parse(localStorage.getItem('users')) || []; // Get users from localStorage
+    if (!fullName.value || !email.value || !password.value || !confirmPassword.value) { 
         alert("Please enter username and password");
     } else if (password.value !== confirmPassword.value) {
         alert("Password and confirm password do not match");
     } else {
-        const user = {
+        const user = { // Create a new user object
             id: users.length + 1,
             fullName: fullName.value,
             email: email.value,
@@ -48,13 +48,13 @@ function handleSignUp() {
             gender: gender.value,
             birth: birth.value
         }
-        users.push(user);
-        localStorage.setItem('users', JSON.stringify(users));
+        users.push(user); // Add the new user to the users array
+        localStorage.setItem('users', JSON.stringify(users)); //lưu trữ users vào localStorage
         alert("Sign up successful");
-        window.location.href = "../login";
+        window.location.href = "../login/"; // Redirect to login page
     }
 }
 
-btnSignUp.addEventListener("click", () => {
+btnSignUp.addEventListener("click", () => { // Add event listener to the button
     handleSignUp();
 }) 

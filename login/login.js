@@ -14,16 +14,16 @@ function handleLogin() {
         alert("Password must contain at least 1 lowercase letter, 1 uppercase letter and 1 number");
         return;
     }
-    let users = localStorage.getItem("users");
+    let users = localStorage.getItem("users"); // Get users from localStorage
     if (!email.value || !password.value) {
         alert("Please enter email and password");
     } else {
         users = JSON.parse(users); // convert string to json
-        const user = users.find(user => user.email == email.value && user.password == password.value);
-        if (user) {
+        const user = users.find(user => user.email == email.value && user.password == password.value); // Find user by email and password
+        if (user) { // If user exists
             localStorage.setItem("currentUser", JSON.stringify(user));
             alert("Login successful");
-            location.href = "../home";
+            location.href = "../home/";
         } else {
             alert("Invalid username or password");
         }

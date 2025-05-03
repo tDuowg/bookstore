@@ -4,11 +4,11 @@ const btnSignUp = document.getElementById("btnSignUp");
 
 if (btnLogin && btnSignUp) {
     btnSignUp.addEventListener("click", () => {
-        window.location.href = "../signup";
+        window.location.href = "../signup/";
     });
 
     btnLogin.addEventListener("click", () => {
-        window.location.href = "../login";
+        window.location.href = "../login/";
     });
 }
 
@@ -23,7 +23,7 @@ if (!(pathName.includes("login") || pathName.includes("signup"))) {
         const logout = document.getElementById("logout");
         logout.addEventListener("click", () => {
             localStorage.removeItem("currentUser");
-            window.location.href = "../login";
+            window.location.href = "../login/";
         });
     } else {
         form.style.display = "flex";
