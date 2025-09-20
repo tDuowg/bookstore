@@ -1,7 +1,10 @@
+import { loginWithGoogle, loginUser } from "../firebase/config.js"; 
+
 const btnLogin = document.getElementById("btnLogin");
 const email = document.getElementById("floatingInput");
+const btnLoginGG = document.getElementById("btnLoginGG");
 const password = document.getElementById("floatingPassword");
-function handleLogin() {
+async function handleLogin() {
     if (!email.value.match(/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/)) {
         alert("Invalid email format");
         return;
@@ -14,12 +17,10 @@ function handleLogin() {
         alert("Password must contain at least 1 lowercase letter, 1 uppercase letter and 1 number");
         return;
     }
-    let users = localStorage.getItem("users"); // Get users from localStorage
     if (!email.value || !password.value) {
         alert("Please enter email and password");
     } else {
-        users = JSON.parse(users); // convert string to json
-        const user = users.find(user => user.email == email.value && user.password == password.value); // Find user by email and password
+        const user = await loginUser(email.value, password.value);
         if (user) { // If user exists
             localStorage.setItem("currentUser", JSON.stringify(user));
             alert("Login successful");
@@ -29,7 +30,16 @@ function handleLogin() {
         }
     }
 }
+async function handleLoginWithGG() {
+    const user = await loginWithGoogle();
+    if (user) {
+        alert("Login with Google successful");
+    }
+    else {
+        alert("Login with Google failed");
+    }
+}
 
-btnLogin.addEventListener("click", () => {
-    handleLogin();
-})
+btnLogin.addEventListener("click", handleLogin);
+
+btnLoginGG.addEventListener("click", handleLoginWithGG );

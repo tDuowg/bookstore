@@ -4,8 +4,8 @@ const inputEl = document.getElementById("input");
 const sendButtonEl = document.getElementById("send-button");
 const deleteButton = document.getElementById("delete");
 
-if (deleteButton) {
-    deleteButton.addEventListener("click", () => {
+if (deleteButton) { // Check if deleteButton exists
+    deleteButton.addEventListener("click", () => {  // Add event listener to delete button
         const boxMessage = document.getElementById("messages");
         boxMessage.innerHTML = "";
         localStorage.setItem('liorion_ai', "[]");
