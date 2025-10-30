@@ -83,3 +83,13 @@ export async function getAllProducts() {
     }
     return products;
 }
+
+export async function getProductById(id) {
+    const querySnapshot = await getDocs(collection(db, "products"));
+    for (let i = 0; i < querySnapshot.docs.length; i++) {
+        if (querySnapshot.docs[i].data().id === id) {
+            return querySnapshot.docs[i].data();
+        }
+    }
+    return null;
+}
