@@ -1,3 +1,4 @@
+import { addProduct, getAllProducts } from "../firebase/config.js";
 const dataBooks = [
     {
         id: 1,
@@ -182,13 +183,44 @@ for (let i = 0; i < countRow; i++) {
     }
     html += "</div>";
 }
+const user = JSON.parse(localStorage.getItem("currentUser"));
 
 let productOutstanding = document.getElementById('product-outstanding'); // Lấy element có id là product-outstanding
 productOutstanding.innerHTML = `
-    <h2>Sản phẩm nổi bật</h2>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Sản phẩm nổi bật</h2>
+        ${user.role == 'admin' ? '<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Thêm sản phẩm</button>' : ''}
+    </div>
     ${html} 
 `; // Gán html vào element có id là product-outstanding
 
 function handleBuy(id) {
     window.location.href = `../detail/index.html?id=${id}`
+}
+
+
+// Lấy các element từ form thêm sản phẩm
+let productName = document.getElementById('productName');
+let productPrice = document.getElementById('productPrice');
+let productQuantity = document.getElementById('productQuantity');
+let productCategory = document.getElementById('productCategory');
+let Thumbnail = document.getElementById('thumbnailUrl');
+let ImageDescription1 = document.getElementById('imageDescription1');
+let ImageDescription2 = document.getElementById('imageDescription2');
+let description = document.getElementById('description');
+let btnSaveProduct = document.getElementById('saveProduct');
+btnSaveProduct.onclick = async function () {
+    let newProduct = {
+        nameBook: productName.value,
+        price: productPrice.value,
+        status: parseInt(productQuantity.value),
+        category: productCategory.value,
+        thumbnail: Thumbnail.value,
+        imagel: ImageDescription1.value,
+        image2: ImageDescription2.value, 
+        description: description.value,
+    };
+    await addProduct(newProduct);
+    alert('Thêm sản phẩm thành công');
+    location.reload();  // Tải lại trang để hiển thị sản phẩm mới
 }

@@ -178,6 +178,60 @@
 
 
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Thêm mới sản phẩm</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="productName" placeholder="Tên sản phẩm">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="productPrice" placeholder="Giá sản phẩm">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="productQuantity" placeholder="Số lượng">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text " class="form-control" id="productCategory" placeholder="Danh mục sản phẩm">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basic-url" class="form-label">Thumbnail url</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic addon3"> https://</span>
+                            <input type="text" class="form-control" id="thumbnailUrl" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basic-url" class="form-label">Image decription</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic addon3"> https://</span>
+                            <input type="text" class="form-control" id="imageDescription1" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basic-url" class="form-label">Image decription</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic addon3"> https://</span>
+                            <input type="text" class="form-control" id="imageDescription2" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="saveProduct">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     const products = document.querySelectorAll(".item");
@@ -189,6 +243,6 @@
 </script>
 <script src="../common/index.js"></script>
 <script src="../common/authentication.js"></script>
-<script src="./index.js"></script>
+<script src="./index.js" type="module"></script>
 
 </html>

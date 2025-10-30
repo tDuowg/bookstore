@@ -45,7 +45,7 @@ async function handleSignUp() {
             email: email.value,
             password: password.value,
             gender: gender.value,
-            birth: birth.value
+            birth: birth.value,
         }
         const res = await registerUser(user);
         

@@ -1,4 +1,4 @@
-import { loginWithGoogle, loginUser } from "../firebase/config.js"; 
+import { loginWithGoogle, loginUser } from "../firebase/config.js";
 
 const btnLogin = document.getElementById("btnLogin");
 const email = document.getElementById("floatingInput");
@@ -33,7 +33,9 @@ async function handleLogin() {
 async function handleLoginWithGG() {
     const user = await loginWithGoogle();
     if (user) {
-        alert("Login with Google successful");
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        alert("Login successful");
+        location.href = "../home/";
     }
     else {
         alert("Login with Google failed");
@@ -42,4 +44,4 @@ async function handleLoginWithGG() {
 
 btnLogin.addEventListener("click", handleLogin);
 
-btnLoginGG.addEventListener("click", handleLoginWithGG );
+btnLoginGG.addEventListener("click", handleLoginWithGG);
