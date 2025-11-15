@@ -1,7 +1,7 @@
 //import firebase sdk
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
 import { GoogleAuthProvider, signOut, signInWithPopup, onAuthStateChanged, getAuth } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
-import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
 // Config firebase cho app
 const firebaseConfig = {
     apiKey: "AIzaSyBZxT8cCXZJ10BNZdhRt5wVleXBYjPF8GI",
@@ -72,7 +72,7 @@ export async function addProduct(productData) {
     body.rating = 5;
     body.totalRating = 0;
     const res = await addDoc(collection(db, "products"), body);
-return res;
+    return res;
 }
 // Lấy ra tất cả sản phẩm từ firestore
 export async function getAllProducts() {
@@ -92,4 +92,25 @@ export async function getProductById(id) {
         }
     }
     return null;
+}
+export async function updateProduct(id, productData) {
+    const querySnapshot = await getDocs(collection(db, "products"));
+    for (let i = 0; i < querySnapshot.docs.length; i++) {
+        if (querySnapshot.docs[i].data().id === id) {
+            const docRef = doc(db, "products", querySnapshot.docs[i].id);
+            await updateDoc(docRef, productData);
+        }
+    }
+
+}
+
+export async function deleteProduct(id) {
+    const querySnapshot = await getDocs(collection(db, "products"));
+    for (let i = 0; i < querySnapshot.docs.length; i++) {
+        if (querySnapshot.docs[i].data().id === id) {
+            const docRef = doc(db, "products", querySnapshot.docs[i].id);
+            await deleteDoc(docRef);
+        }
+    }
+
 }

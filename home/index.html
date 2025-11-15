@@ -232,6 +232,63 @@
             </div>
         </div>
     </div>
+     <!-- Edit Product Modal -->
+    <div class="modal fade" id="editProductModal" tabindex="-1" aria-labelledby="editProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editProductModalLabel">Chỉnh sửa sản phẩm</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="UProductName" placeholder="Tên sản phẩm">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="UProductPrice" placeholder="Giá sản phẩm">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="UProductQuantity" placeholder="Số lượng">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text " class="form-control" id="UProductCategory" placeholder="Danh mục sản phẩm">
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="UDescription" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basic-url" class="form-label">Thumbnail url</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic addon3"> https://</span>
+                            <input type="text" class="form-control" id="UThumbnailUrl" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basic-url" class="form-label">Image decription</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic addon3"> https://</span>
+                            <input type="text" class="form-control" id="UImageDescription1" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="basic-url" class="form-label">Image decription</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic addon3"> https://</span>
+                            <input type="text" class="form-control" id="UImageDescription2" aria-describedby="basic-addon3">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-danger" id="UDeleteProduct">
+                        Xóa sản phẩm
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary" id="USaveProduct">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     const products = document.querySelectorAll(".item");

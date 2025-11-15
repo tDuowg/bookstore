@@ -1,5 +1,5 @@
-import { addProduct, getAllProducts } from "../firebase/config.js";
-
+import { addProduct, getAllProducts, getProductById, updateProduct, deleteProduct } from "../firebase/config.js";
+var id = null;
 window.onload = renderUI;
 async function renderUI() {
     const dataBooks = await getAllProducts();
@@ -34,6 +34,7 @@ async function renderUI() {
                     <button type="button" class="btn btn-outline-dark">Mua ngay</button>
                     </a>
                 </div>
+                <button data-id = ${dataBooks[index].id} type= "button" class="btn btn-outline-dark" style="height: fit-content !important;" data-bs-toggle="modal" data-bs-target="#editProductModal">Chỉnh sửa</button>
             </div>
         `
             };
@@ -77,4 +78,53 @@ btnSaveProduct.onclick = async function () {
     await addProduct(newProduct);
     alert('Thêm sản phẩm thành công');
     location.reload();  // Tải lại trang để hiển thị sản phẩm mới
+}
+
+let UProductName = document.getElementById('UProductName');
+let UProductPrice = document.getElementById('UProductPrice');
+let UProductQuantity = document.getElementById('UProductQuantity');
+let UProductCategory = document.getElementById('UProductCategory');
+let UThumbnail = document.getElementById('UThumbnailUrl');
+let UImageDescription1 = document.getElementById('UImageDescription1');
+let UImageDescription2 = document.getElementById('UImageDescription2');
+let UDescription = document.getElementById('UDescription');
+let UBtnSaveProduct = document.getElementById('USaveProduct');
+let UDeleteProduct = document.getElementById('UDeleteProduct');
+
+const editProductModal = document.getElementById('editProductModal');
+editProductModal.addEventListener('show.bs.modal', async function (event) {
+    id = event.relatedTarget.getAttribute('data-id');
+    const product = await getProductById(id);
+
+    UProductName.value = product.nameBook;
+    UProductPrice.value = product.price;
+    UProductQuantity.value = product.status;
+    UProductCategory.value = product.category;
+    UThumbnail.value = product.thumbnail;
+    UImageDescription1.value = product.imagel;
+    UImageDescription2.value = product.image2;
+    UDescription.value = product.description;
+})
+UBtnSaveProduct.onclick = async function () {
+    let updatedProduct = {
+        nameBook: UProductName.value,
+        price: UProductPrice.value,
+        status: parseInt(UProductQuantity.value),
+        category: UProductCategory.value,
+        thumbnail: UThumbnail.value,
+        imagel: UImageDescription1.value,
+        image2: UImageDescription2.value,
+        description: UDescription.value,
+    };
+    await updateProduct(id, updatedProduct);
+    alert('Cập nhật sản phẩm thành công');
+    location.reload();  // Tải lại trang để hiển thị sản phẩm mới
+}
+UDeleteProduct.onclick = async function () {
+    const confirmDelete = confirm('Bạn có chắc chắn muốn xóa sản phẩm này?');
+    if (confirmDelete) {
+        await deleteProduct(id);
+        alert('Xóa sản phẩm thành công');
+        location.reload();  // Tải lại trang để hiển thị sản phẩm mới
+    }
 }

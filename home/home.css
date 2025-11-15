@@ -67,7 +67,7 @@
 }
 .outstanding-product .item{
     flex: 1;
-    height: 550px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
