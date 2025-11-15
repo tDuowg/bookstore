@@ -50,7 +50,7 @@ async function handleSignUp() {
         const res = await registerUser(user);
         
         alert("Sign up successful");
-        window.location.href = "../login/"; // Redirect to login page
+        window.location.href = "../login/index.html"; // Redirect to login page
     }
 }
 

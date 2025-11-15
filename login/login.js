@@ -24,7 +24,7 @@ async function handleLogin() {
         if (user) { // If user exists
             localStorage.setItem("currentUser", JSON.stringify(user));
             alert("Login successful");
-            location.href = "../home/";
+            location.href = "../home/index.html";
         } else {
             alert("Invalid username or password");
         }
@@ -35,7 +35,7 @@ async function handleLoginWithGG() {
     if (user) {
         localStorage.setItem("currentUser", JSON.stringify(user));
         alert("Login successful");
-        location.href = "../home/";
+        location.href = "../home/index.html";
     }
     else {
         alert("Login with Google failed");

@@ -30,7 +30,7 @@ async function renderUI() {
                         </div>
                         <p>${dataBooks[index].price}</p>
                     </div>
-                    <a href="../detail/?id=${dataBooks[index].id}">
+                    <a href="../detail/index.html?id=${dataBooks[index].id}">
                     <button type="button" class="btn btn-outline-dark">Mua ngay</button>
                     </a>
                 </div>
